@@ -27,6 +27,8 @@ const Tasks = () => {
         });
       };
       const addGoalHandler = enteredText => {
+        if(enteredText.trim().length===0)
+        return;
         setData(prevGoals => {
           const updatedGoals = [...prevGoals];
           updatedGoals.unshift({ title: enteredText, id: Math.random().toString(),completed:true });

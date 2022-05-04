@@ -2,6 +2,7 @@ import React from 'react'
 // import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { applyMiddleware } from 'redux';
 const TaskInput = (props) => {
     const navigate=useNavigate();
     const [enteredValue, setEnteredValue] = useState("");
@@ -13,10 +14,6 @@ const TaskInput = (props) => {
   
     const formHandler = (event) => {
       
-      if (enteredValue.trim().length === 0) {
-        setIsValid(false);
-        return;
-      }
       props.onAddGoal(enteredValue);
       console.log("Adi");
        props.onCancel();
