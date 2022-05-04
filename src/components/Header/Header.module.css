@@ -1,17 +1,20 @@
 .header {
-    /* width: 100%; */
+    width: 100%;
+    box-sizing: border-box;
     height: 3.5rem;
     display: flex;
+   /* flex-wrap:wrap; */
     padding: 0;
     border-radius: .75rem;
     /* justify-content: ; */
     align-items: center;
     background-color:#25252533
+  
   }
   
   .logo {
     font-size: 2rem;
-    padding: 20px;
+    padding: 2rem;
     color: rgb(110, 107, 107);
   }
   
@@ -23,8 +26,8 @@
   }
   
   .nav li {
-    /* margin-left: 1.5rem; */
-    padding:20px;
+    
+    margin:2rem;
     font-size: 1.5rem;
   }
   
@@ -43,4 +46,9 @@
   border:1px solid black;
   color:white;
   background-color: black;
+}
+@media only screen and (max-width: 600px) {
+  /* For desktop: */
+  .nav li {margin: .5rem;}
+  
 }

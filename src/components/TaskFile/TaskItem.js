@@ -20,11 +20,10 @@ const TaskItem = (props) => {
   console.log(content.length);
   return (
     <li className={classes.item} >
-      <div>{props.index}</div>
-      <div>{content}</div>
-      <div>{props.flag==true?"True":"False"}</div>
+      <div className={classes.item1}>{props.index}</div>
+      <div >{content}</div>
+      <div className={classes.item2}>{props.flag==true?"True":"False"}</div>
       <button onClick={deleteHandler}>Delete</button>
-      
     </li>
   )
 }
